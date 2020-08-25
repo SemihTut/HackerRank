@@ -1,4 +1,4 @@
-package CodingPractice;
+package CodingPractice.String;
 
 import java.util.HashMap;
 import java.util.Map;
