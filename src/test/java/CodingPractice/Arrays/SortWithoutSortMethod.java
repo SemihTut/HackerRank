@@ -54,7 +54,7 @@ public class SortWithoutSortMethod {
         }
         return arr;
     }
-    //formulize it
+    //
     public static int findMax(ArrayList<Integer>asd){
 
         int max = Integer.MIN_VALUE;
