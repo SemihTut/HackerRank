@@ -17,7 +17,7 @@ public class PasswordValidation {
     }
 
     public static boolean isValid(String password){
-
+        //regex
         String lowercase = "(.*[a-z])";
         String uppercase = "(.*[A-Z])";
         String numbers="(.*[0-9].*)";
@@ -32,6 +32,7 @@ public class PasswordValidation {
         if(password.length()>=6 && !password.contains(" ")){
 
             if(hasLower&&hasSpecial&&hasUpper&&hasDigits){
+
                 Valid=true;
             }
         }
