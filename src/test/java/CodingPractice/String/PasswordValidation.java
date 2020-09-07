@@ -15,7 +15,7 @@ public class PasswordValidation {
         5. Password should at least contain a digit
          */
     }
-
+//testing
     public static boolean isValid(String password){
         //regex
         String lowercase = "(.*[a-z])";
