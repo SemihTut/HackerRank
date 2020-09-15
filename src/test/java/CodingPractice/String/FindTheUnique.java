@@ -20,7 +20,7 @@ public class FindTheUnique {
             }
 
         }
-      //  System.out.println("s = " + s);
+        System.out.println("s = " + s);
         String[]city ={"Tokyo","Stockholm","London","Boston"};
         System.out.println(findCities(city));
 
