@@ -8,8 +8,14 @@ import java.util.OptionalDouble;
 public class PinCode {
 
     public static void main(String[] args) {
-      long[]birthDate=new long[]{2,6,0,4,1,9,8,5};
-        System.out.println(pinCalculator(birthDate));
+        long[]alp=new long[]{2,4,0,4,1,9,8,9};
+        long[]samet=new long[]{2,3,1,0,1,9,8,6};
+        long[]yusuf=new long[]{0,1,1,0,1,9,8,9};
+
+      long[]abim = new long[]{0,5,0,8,1,9,7,9};
+        System.out.println("Alp's pin code analyze " + pinCalculator(alp));
+        System.out.println("Samet's pin code analyze "+ pinCalculator(samet));
+        System.out.println("Yusuf's pin code analyze "+ pinCalculator(yusuf));
 
     }
 
