@@ -57,6 +57,10 @@ public class StreamUnique {
                 .get().getKey();
         System.out.println("min = " + key2);
 
+        listTeam.stream().collect(Collectors.groupingBy(s->s,Collectors.counting()))
+                .entrySet().stream()
+                .max(Comparator.comparingLong(Map.Entry::getValue));
+
 
         listTeam.stream()
                 .collect(Collectors.groupingBy(s -> s, Collectors.counting()))
