@@ -14,8 +14,14 @@ public class Palindrome {
     }
     public static boolean isPalindrome(String str){
         String temp = str.replaceAll("\\s+","").toLowerCase();
+
+       // IntStream.rangeClosed(0,temp.length()/2)
+             //   .noneMatch(i->temp.charAt(i) != temp.charAt(temp.length()-1-i));
         return IntStream.rangeClosed(0,temp.length()/2)
                 .noneMatch(i->temp.charAt(i) != temp.charAt(temp.length()-1-i));
+
+
+
 
     }
 
