@@ -1,5 +1,12 @@
 package CodingPractice.Stream;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -70,5 +77,55 @@ public class StreamUnique {
 
 
     }
+
+    @Test
+    public void test(){
+        WebDriverManager.chromedriver().setup();
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://www.amazon.com/");
+        driver.manage().window().maximize();
+        List<WebElement> links = driver.findElements(By.tagName("a"));
+        links.stream().forEach(list->list.getText());
+        List<String> answer = links.stream()
+                .filter(link -> link.getText().contains("Amazon") && !link.getText().startsWith("Amazon"))
+                .map(link->link.getText())
+                .collect(Collectors.toList());
+        System.out.println(answer+" answer size is "+ answer.size());
+
+        driver.quit();
+
+    }
+  /*  @Test
+    public void List<String> findCities (String[]cities){
+
+        List<String> cityList= Arrays.asList(cities);
+        List<String> n = cityList.stream()
+                .filter(city -> city.length() > 5 && city.endsWith("n"))
+                .collect(Collectors.toList());
+
+        return n;
+
+    }*/
+
+    @Test
+    public void str(){
+
+        String[]city ={"Tokyo","Stockholm","London","Boston"};
+        List<String> collect = Arrays.stream(city).sorted().collect(Collectors.toList());
+        collect.forEach(System.out::println);
+        System.out.println("--------------");
+
+        Arrays.stream(city).filter(c->c.length()>6).forEach(System.out::println);
+        List<String> t = Arrays.stream(city).filter(c -> c.charAt(0)=='T').collect(Collectors.toList());
+        t.forEach(s-> System.out.println(s.charAt(0)));
+        System.out.println("--------------");
+
+
+
+    }
+    public String reversed(String c){
+        return new StringBuilder(c).reverse().toString();
+    }
 }
+
 
