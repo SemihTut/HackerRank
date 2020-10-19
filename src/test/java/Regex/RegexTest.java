@@ -39,9 +39,7 @@ public class RegexTest {
                 .collect(Collectors.toList());
         List<String> collect2 = collect1.stream().flatMap(List::stream).collect(Collectors.toList());
         System.out.println("collect2 = " + collect2.size());
-        System.out.println("collect1 = " + collect1);
-        System.out.println("collect = " + collect.size());
-        System.out.println("collect1 = " + collect1.size());
+        System.out.println("collect2 = " + collect2);
         driver.quit();
 
     }
@@ -56,5 +54,9 @@ public class RegexTest {
             }
         }
         return ask;
+    }
+
+    public static String maskele(String str) {
+        return str.replaceAll(".(?=.{4})", "*");
     }
 }
