@@ -9,11 +9,16 @@ public class CodingTrain {
     public static void main(String[] args) {
 
         String text = "Galatasaray, 22 sampiyonlugunu aldiginda ben 33 yasindaydim" +
-                " asdli gelir mi asd@gmail.com 236-568";
+                " asdli gelir mi asd@gmail.com 236-568, asli , asli23, assli345 semi";
         String reg = "\\d{2}";
         String reg1 = "[^\\d\\s]";
-        System.out.println("reg(text,reg) = " + reg(text, reg));
+        String reg2 = "\\W";
+        String reg3 = "asd?li\\s";
+        String reg4 = "as\\w?li\\d{2}";
+        String reg5 = "\\b\\w{4}\\b"; //4 harfli kelimler
+        System.out.println("reg(text,reg) = " + reg(text, reg5));
         System.out.println("reg1(text,reg1) = " + reg(text, reg1));
+        System.out.println("reg1(text,reg2) = " + reg(text, reg2));
 
 
     }
