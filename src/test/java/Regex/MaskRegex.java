@@ -6,7 +6,8 @@ public class MaskRegex {
 
     }
 
-    public static String maskele(String str) {
+    public static String maskele(String str)
+    {
         return str.replaceAll(".(?=.{4})", "*");
     }
 }
