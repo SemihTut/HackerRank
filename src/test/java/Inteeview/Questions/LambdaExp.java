@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.Consumer;
+import java.util.stream.Collectors;
 
 public class LambdaExp {
     public static void main(String[] args) {
@@ -39,6 +40,7 @@ public class LambdaExp {
         System.out.println("-----------------");
         namesList.stream()
                 .filter(name-> (name.charAt(0)=='B'&& name.length()>4))
+                .collect(Collectors.toList())
                 .forEach(System.out::println);
 
     }
