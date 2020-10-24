@@ -51,7 +51,7 @@ public class RegEx {
         Matcher resultMatcher = Pattern.compile(regex).matcher(str);
         String group = "";
         if(resultMatcher.find()){
-            group += resultMatcher.group().trim();
+            group += resultMatcher.group().replace(" ","");
             //System.out.println("group = " + group);
         }
         return group;
