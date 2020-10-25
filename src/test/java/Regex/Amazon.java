@@ -21,7 +21,7 @@ public class Amazon {
         }
 
         List<String> collect = linksList.stream()
-                .filter(x -> !Pattern.compile("^Amazon").matcher(x).find())
+                .filter(x -> Pattern.compile("Amazon$").matcher(x).find())
                 .collect(Collectors.toList());
         System.out.println("size = " + collect);
 
