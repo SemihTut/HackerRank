@@ -12,19 +12,21 @@ public class Amazon {
     public static void main(String[] args) {
         List<String>linksList = new ArrayList<>();
         linksList.add("Amazon semih");
-        linksList.add("semih");
+        linksList.add("2amazon");
         linksList.add("Semih Amazon");
-        String list = "Amazon Business Card";
-        list.matches("^Amazon");
-        if(list.matches("^Amazon")){
-            System.out.println("list = " + list);
-        }
+        linksList.add("Amazon Business Card amazon");
+
 
         List<String> collect = linksList.stream()
-                .filter(x -> Pattern.compile("Amazon$").matcher(x).find())
+                .filter(x -> !Pattern.compile("^([Aa])mazon").matcher(x).find()
+                && Pattern.compile("([Aa])mazon").matcher(x).find())
                 .collect(Collectors.toList());
-        System.out.println("size = " + collect);
+        System.out.println("result " + collect);
 
+        List<String> collect1 = linksList.stream()
+                .filter(x -> Pattern.compile("\\b([Aa])mazon$").matcher(x).find())
+                .collect(Collectors.toList());
+        System.out.println("Link ends with amazon " + collect1);
 
     }
 

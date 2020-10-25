@@ -39,7 +39,7 @@ public class FindTheUnique {
 
         List<Integer> asd = Arrays.asList(2,3,5,1,9,4,3,7,3,5,1,2,9);
         asd.stream().distinct().sorted().forEach(System.out::print);
-        List<Integer> collect = asd.stream().sorted().collect(Collectors.toList());
+        List<Integer> collect = asd.stream().distinct().sorted().collect(Collectors.toList());
         System.out.println(collect);
 
     }
