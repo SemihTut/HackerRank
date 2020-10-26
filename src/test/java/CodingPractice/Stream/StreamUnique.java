@@ -19,7 +19,7 @@ public class StreamUnique {
         List<String> unique = listTeam.stream()
                 .distinct().collect(Collectors.toList());//A,B,C,D,E,F
         System.out.println("unique = " + unique);
-
+        // to find the unique ones by using stream
         List<String> collect = listTeam.stream()
                 .map(String::toUpperCase)
                 // Build a map from word -> frequency
@@ -30,6 +30,18 @@ public class StreamUnique {
                 .filter(e -> e.getValue() == 1).map(Map.Entry::getKey).collect(Collectors.toList());
         System.out.println("entryStream = " + collect);
 
+        // to find the unique ones by using map merge
+        Map<String, Integer> freqs = new HashMap<>();
+        for(String citym : listTeam){
+            freqs.merge(citym,1,Integer::sum);
+        }
+        List<String>uniqCities = new ArrayList<>();
+        uniqCities = freqs.entrySet().stream().filter(e-> e.getValue().equals(1))
+                                                .map(Map.Entry::getKey)
+                                                .collect(Collectors.toList());
+        System.out.println("uniqCities = " + uniqCities);
+
+        //  ------------------------------------------------------------------
         List<StringBuilder> collectReverse = listTeam.stream().map(StringBuilder::new)
                 .map(StringBuilder::reverse).collect(Collectors.toList());
         System.out.println("collectReverse = " + collectReverse);
@@ -85,10 +97,10 @@ public class StreamUnique {
         driver.get("https://www.amazon.com/");
         driver.manage().window().maximize();
         List<WebElement> links = driver.findElements(By.tagName("a"));
-        links.stream().forEach(list->list.getText());
+        links.forEach(WebElement::getText);
         List<String> answer = links.stream()
                 .filter(link -> link.getText().contains("Amazon") && !link.getText().startsWith("Amazon"))
-                .map(link->link.getText())
+                .map(WebElement::getText)
                 .collect(Collectors.toList());
         System.out.println(answer+" answer size is "+ answer.size());
 
