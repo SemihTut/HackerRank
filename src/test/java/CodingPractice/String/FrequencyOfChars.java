@@ -40,6 +40,7 @@ public class FrequencyOfChars {
 
         for(char c : freqs.keySet()){
 
+           // freqs.get(c).equals(1) ? end.add(c) : end2.add(c);
             if (freqs.get(c) == 1) {
                 end.add(c);
             } else {
