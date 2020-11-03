@@ -51,5 +51,22 @@ public class QATestAssignment {
                 .stream().sorted(Map.Entry.comparingByValue())
                 .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
 
+        Map<String,Integer> freq = new HashMap<>();
+        List<String> end = new ArrayList<>();
+        List<String> end2 = new ArrayList<>();
+        for(String s : listTeam){
+            freq.merge(s,1,Integer::sum);
+        }
+        System.out.println("---------------------------------");
+        System.out.println("freq = " + freq);
+
+        for(String str : freq.keySet()){
+            (freq.get(str)==1?end:end2).add(str);
+        }
+        System.out.println("end = " + end);
+        System.out.println("end2 = " + end2);
+
+
+
     }
 }
