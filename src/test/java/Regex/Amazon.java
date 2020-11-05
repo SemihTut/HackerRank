@@ -23,6 +23,7 @@ public class Amazon {
                 .collect(Collectors.toList());
         System.out.println("result " + collect);
 
+
         List<String> collect1 = linksList.stream()
                 .filter(x -> Pattern.compile("\\b([Aa])mazon$").matcher(x).find())
                 .collect(Collectors.toList());
