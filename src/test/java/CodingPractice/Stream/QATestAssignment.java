@@ -66,7 +66,8 @@ public class QATestAssignment {
         System.out.println("end = " + end);
         System.out.println("end2 = " + end2);
 
-
+        Random rnd = new Random();
+        System.out.println("listTeam.get(rnd.nextInt()) = " + listTeam.get(rnd.nextInt(listTeam.size())));
 
     }
 }
