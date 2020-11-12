@@ -2,12 +2,12 @@ package Regex;
 
 public class MaskRegex {
     public static void main(String[] args) {
-        System.out.println(maskele("sem"));
+        System.out.println(maskele("semih naber adamim"));
 
     }
 
     public static String maskele(String str)
     {
-        return str.replaceAll(".(?=.{4})", "*");
+        return str.replaceAll(".(?=.{5})", "*");
     }
 }

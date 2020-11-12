@@ -20,6 +20,9 @@ public class QATestAssignment {
 
         List<String> listTeam = Arrays.asList("Istanbul","Ankara","Izmir","Helsinki","Espoo","Izmir","Bolu","Helsinki",
                 "Istanbul","Ankara","Izmir","Helsinki","Espoo","Izmir","Bolu","Rome","Turku","Bolu");
+
+
+
         //convert all lists to one list
        // List<String> stringList = lists.stream().flatMap(List::stream).collect(Collectors.toList());
 

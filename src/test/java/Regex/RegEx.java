@@ -11,6 +11,9 @@ public class RegEx {
     public static void main(String[] args) {
 
         String result = "1-48 of 135 results for \"selenium\" semihtut123@gmail.com sem_ih@hotmail.edu";
+        // regular expression
+        // streams & lambda
+
         String regNumber = "[a-zA-Z\\s\\W+]";
         String regSearch = "[\\w.]+@\\w+\\.(net|com|edu)";
         String resultNumber = "\\s\\d+\\s";
