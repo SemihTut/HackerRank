@@ -10,9 +10,15 @@ import java.util.stream.Collectors;
 
 public class ternary {
     public static void main(String[] args) {
-        int i = algoQ(9753, 8641);
-        System.out.println("i = " + i);
-        deneme();
+       // int i = algoQ(9753, 8641);
+      //  System.out.println("i = " + i);
+        //deneme();
+        String name = "adanadas";
+
+
+        System.out.println(reverse(name).equals(name)?"same":"diff");
+
+
     }
     public static int algoQ(int a, int b) {
         String first = String.valueOf(a);
@@ -41,6 +47,12 @@ public class ternary {
         myMap.put("Semih",35);
         myMap.put("Asli",30);
         myMap.forEach((s,t)-> System.out.println(s+"  "+t));
+
+    }
+
+    public static String reverse(String str){
+        StringBuilder sb = new StringBuilder(str);
+        return sb.reverse().toString();
 
 
     }
