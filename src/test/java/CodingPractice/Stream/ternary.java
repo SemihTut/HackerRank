@@ -14,10 +14,7 @@ public class ternary {
       //  System.out.println("i = " + i);
         //deneme();
         String name = "adanadas";
-
-
         System.out.println(reverse(name).equals(name)?"same":"diff");
-
 
     }
     public static int algoQ(int a, int b) {
