@@ -5,7 +5,7 @@ import java.util.stream.Collectors;
 
 public class FindDuplicates {
     public static void main(String[] args) {
-        List<Integer> arr = new ArrayList<>(Arrays.asList(2,3,45,3,67,34,2,3,45));
+        List<Integer> arr = new ArrayList<>(Arrays.asList(2,3,45,3,67,34,2,3,45,67,9876));
         Map<Integer,Integer> quantity = new HashMap<>();
         //first way merge and for each
         for(Integer a : arr){
