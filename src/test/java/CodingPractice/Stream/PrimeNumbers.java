@@ -7,16 +7,16 @@ import java.util.stream.IntStream;
 public class PrimeNumbers {
 
     public static void main(String[] args) {
-        System.out.println("isPrime " + isPrime(15));
-        System.out.println(primeNumbersUnTil(17));
-        System.out.println(primeNumbersBetweenTwoNumbers(12,475));
+        System.out.println("isPrime " + isPrime(11));
+        System.out.println(primeNumbersUnTil(18));
+        System.out.println(primeNumbersBetweenTwoNumbers2(12,47));
 
     }
     public static boolean isPrime(int number){
-        return number>1 && IntStream.range(2,number).noneMatch(i->number % i ==0);
+        return number>1 && IntStream.rangeClosed(2,number/2).noneMatch(i->number % i ==0);
     }
     public static List< Integer > primeNumbersUnTil(int n) {
-        return IntStream.rangeClosed(2,n).filter(PrimeNumbers::isPrime).boxed().collect(Collectors.toList());
+        return IntStream.range(2,n).filter(PrimeNumbers::isPrime).boxed().collect(Collectors.toList());
 
     }
     public static List<Integer>primeNumbersBetweenTwoNumbers(int startingNumber, int endingNumber){
@@ -24,4 +24,8 @@ public class PrimeNumbers {
                 .filter(PrimeNumbers::isPrime).boxed().collect(Collectors.toList());
     }
 
+    public static List<Integer>primeNumbersBetweenTwoNumbers2(int startingNumber, int endingNumber){
+        return IntStream.rangeClosed(startingNumber,endingNumber)
+                .filter(number->number>1 && IntStream.range(2,number).noneMatch(i->number % i ==0)).boxed().collect(Collectors.toList());
+    }
 }
