@@ -1,32 +1,25 @@
 package CodingPractice.Stream;
 
-
-import java.util.Arrays;
-
-;
+import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 
 public class SumOfNumbers {
     public static void main(String[] args) {
         int[]number = new int[]{17,11,0,23,9,89,3,215,11,78};
-
-        int totalSum = Arrays.stream(number).sum();
-        int leftOfZeroSum = 0;
-        for(int i=0;i<indexOfZero(number);i++){
-            leftOfZeroSum+=number[i];
-        }
-        System.out.println("0'in solundaki sayilarin toplami = " + leftOfZeroSum);
-        int rightOfZero = totalSum-leftOfZeroSum;
-        System.out.println("0'in sagindaki sayilarin toplami = " + rightOfZero);
-
+       //Java 8 Stream
+        int leftOfZeroSum = IntStream.range(0, indexOfZero(number)).map(x -> number[x]).sum();
+        int rightOfZeroSum = IntStream.range(indexOfZero(number),number.length).map(x -> number[x]).sum();
+        System.out.println("leftOfZeroSum = " + leftOfZeroSum);
+        System.out.println("rightOfZeroSum = " + rightOfZeroSum);
     }
     public static int indexOfZero(int[]numbers){
-        int index=0;
-        for(int i=0;i<numbers.length;i++){
-            index+=(numbers[i]==0)?i:0;
-        }
-        return index;
+        List<Integer> collect = IntStream.range(0, numbers.length)
+                .filter(x -> numbers[x] == 0).boxed().collect(Collectors.toList());
+        return collect.get(0);
     }
+
 
 }
