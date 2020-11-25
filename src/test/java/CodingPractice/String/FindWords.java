@@ -1,27 +1,20 @@
 package CodingPractice.String;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
+import java.util.*;
+
 
 public class FindWords {
 
     public static void main(String[] args) {
-        String given = "AHKLSISALSKFLSALIIRIES ASLISEMIHGSTRY";
-        String expected = "GALATASARAY";
+        String given = "AHKLSISALSKFLSALIIRIES ASLISEMIHGSTRYUUUUTTTTWWQQQQEEEE";
+        String expected = "SETU";
         System.out.println(howManystr(expected, given));
-
 
     }
     public static Integer howManystr(String str,String givens){
-        char[] chars = str.toCharArray();
+        char[] chars = str.toUpperCase().toCharArray();
         Map<Character,Integer>freq = new HashMap<>();
-        for(Character c : givens.toCharArray()){
+        for(Character c : givens.toUpperCase().toCharArray()){
             freq.merge(c,1,Integer::sum);
         }
         int min = Integer.MAX_VALUE;
