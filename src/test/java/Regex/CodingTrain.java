@@ -68,6 +68,7 @@ public class CodingTrain {
             String namess = m.group(2);
             last += namess+" "+Surname;
             ask.add(last);
+
         }
         return ask;
     }

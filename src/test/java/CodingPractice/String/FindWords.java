@@ -6,7 +6,7 @@ import java.util.*;
 public class FindWords {
 
     public static void main(String[] args) {
-        String given = "AHKLSISALSKFLSALIIRIES ASLISEMIHGSTRYUUUUTTTTWWQQQQEEEE";
+        String given = "AHKLSISALSKFLSALIIRIESIHGSTRYUUUUTTTTWWQQQQEEEE";
         String expected = "SETU";
         System.out.println(howManystr(expected, given));
 
