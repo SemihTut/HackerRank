@@ -1,4 +1,4 @@
-package CodingPractice;
+package CodingPractice.HackerRank;
 
 import java.util.*;
 import java.util.stream.Collectors;
