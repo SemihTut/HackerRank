@@ -10,6 +10,7 @@ public class Fibonacci {
     public static void main(String[] args) {
         System.out.println(getFibonacci(5));
         System.out.println(getFibonacci2(5));
+        System.out.println("fib(5) = " + fib(10));
 
     }
     public static List<Integer>getFibonacci(int series){
@@ -27,4 +28,7 @@ public class Fibonacci {
 
     }
 
+    public static Integer fib(Integer n){
+        return n<=1?n:fib(n-1)+fib(n-2);
+    }
 }
