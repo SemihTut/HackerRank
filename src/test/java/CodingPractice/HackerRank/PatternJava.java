@@ -6,8 +6,9 @@ public class PatternJava {
        /* rightTriangle(4);
         leftTriangle(4);
         pyramid(4);*/
-        pyramidBack(4);
-
+        //pyramidBack(4);
+        backwards(7);
+        pyramid2(7);
     }
 
     public static void rightTriangle(int n) {
@@ -68,6 +69,31 @@ public class PatternJava {
             }
             for(y=0;y<=n-1-k;y++){
                 System.out.print(" *");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void backwards(int n){
+        int i,j,k;
+        for(i=0;i<n;i++){
+            for(k=1;k<=i;k++){
+                System.out.print(" ");
+            }
+            for(j=n-i;j>0;j--){
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+    public static void pyramid2(int n){
+        int i,j,k;
+        for(i=0;i<n;i++){
+            for(j=n-i-1;j>0;j--){
+                System.out.print(" ");
+            }
+            for(k=0;k<=i;k++){
+                System.out.print("* ");
             }
             System.out.println();
         }
