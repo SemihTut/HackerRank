@@ -1,4 +1,6 @@
 package CodingPractice.Codility;
+import org.jetbrains.annotations.NotNull;
+
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -10,8 +12,9 @@ public class Solera {
         System.out.println("solution2(a) = " + solution2(a));
         System.out.println("solution(a) = " + solution(a));
     }
-    public static boolean solution (int[] A) {
+    public static boolean solution (@NotNull int[] A) {
         List<Integer>myList = new ArrayList<>();
+        
         int count =0;
         for(int a :A){
             count=a!=1?count+1:count;
@@ -19,13 +22,13 @@ public class Solera {
             }
         List<Integer> freqList = myList.stream().distinct().collect(Collectors.toList());
 
-        return freqList.size()>1&& count >= 2;
+        return freqList.size()>1 && count >= 2;
         }
 
-        public static int solution2(int[] A) {
+        public static int solution2(@NotNull int[] A) {
             int sum =0;
             for(int a:A){
-                sum=Math.abs(a)>9&&Math.abs(a)<100?sum+a:sum;
+                sum=Math.abs(a)>9 && Math.abs(a)<100?sum+a:sum;
             }
             return sum;
         }
