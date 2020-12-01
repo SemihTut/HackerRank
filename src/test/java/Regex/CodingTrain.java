@@ -10,8 +10,8 @@ import java.util.stream.Collectors;
 public class CodingTrain {
     public static void main(String[] args) {
 
-        String text = "Galatasaray, 22 sampiyonlugunu aldiginda ben 33 yasindaydim" +
-                " asdli gelir (mi) asd1@gmail.com 236-568, (asli) , asli23, assli345 semi sem.tit@gmail.com";
+        String text = "Galatasaray, (22) sampiyonlugunu aldiginda ben 33 yasindaydim" +
+                " asdli gelir (mi) 1@gmail.com 236-568, (asli) , asli23, assli345 semi sem.tit@gmail.com";
 
         String name = "Gunerli,Samet";
 
@@ -39,10 +39,12 @@ public class CodingTrain {
         String reg4 = "as\\w?li\\d{2}";
         String reg5 = "\\b\\w{4}\\b"; //4 harfli kelimler
         String reg6 = "\\(\\b\\w+\\)";
-        String reg7 = "[\\w.]+@\\w+[.](com|net)+";
+        String reg8= "\\([a-zA-Z]+\\)";
+        String reg7 = "[\\w.]+@\\w+[.](com|net)";
         System.out.println("reg(text,reg) = " + reg(text, reg5));
         System.out.println("reg1(text,reg6) = " + reg(text, reg6));
-        System.out.println("reg1(text,reg7) = " + reg(text, reg7));
+        System.out.println("reg7(text,reg7) = " + reg(text, reg7));
+        System.out.println("reg8 = " + reg(text,reg8));
 
 
     }

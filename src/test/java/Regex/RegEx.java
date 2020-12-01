@@ -13,7 +13,8 @@ public class RegEx {
         String result = "1-48 of 135 results for \"selenium\" semihtut123@gmail.com sem_ih@hotmail.edu";
         // regular expression
         // streams & lambda
-
+        String email = "semihtut_34@gmail.com";
+        System.out.println("emailMask(email) = " + emailMask(email));
         String regNumber = "[a-zA-Z\\s\\W+]";
         String regSearch = "[\\w.]+@\\w+\\.(net|com|edu)";
         String resultNumber = "\\s\\d+\\s";
@@ -58,5 +59,8 @@ public class RegEx {
             //System.out.println("group = " + group);
         }
         return group;
+    }
+    public static String emailMask(String email){
+        return email.replaceAll("(?<=.{3}).(?=[^@]*?@)","*");
     }
 }

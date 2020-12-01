@@ -6,8 +6,8 @@ public class MaskRegex {
 
     }
 
-    public static String maskele(String str)
-    {
-        return str.replaceAll(".(?=.{5})", "*");
+    public static String maskele(String str){
+
+        return str.replaceAll(".(?<=.{5})", "*");
     }
 }

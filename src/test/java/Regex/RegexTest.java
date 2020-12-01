@@ -59,4 +59,6 @@ public class RegexTest {
     public static String maskele(String str) {
         return str.replaceAll(".(?=.{4})", "*");
     }
+
+
 }
