@@ -8,12 +8,12 @@ import java.util.stream.Stream;
 public class Fibonacci {
     public static void main(String[] args) {
         System.out.println("fib(5) = " + fib(6));
-        System.out.println("fibonacciList(7) = " + fibonacciList(7));
+        System.out.println("fibonacciList(7) = " + fibonacciList(6));
         System.out.println("fibonacciSumStream(6) = " + fibonacciSumStream(6));
     }
     public static int fib(int n){
 
-        return n<=1?n:fib(n-1)+fib(n-2);
+        return n<2?n:fib(n-1)+fib(n-2);
     }
     public static List<Integer> fibonacciList(int n){
         return Stream.iterate(new int[]{0,1},t->new int[]{t[1],t[0]+t[1]})
