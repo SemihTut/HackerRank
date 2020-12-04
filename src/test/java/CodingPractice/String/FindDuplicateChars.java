@@ -5,8 +5,8 @@ import java.util.regex.Pattern;
 
 public class FindDuplicateChars {
     public static void main(String[] args) {
-        String str = "baaaaaa";
-        System.out.println(repeated(str, "aa"));
+        String str = "baaaaaadfghjkldfguyiyopdfglklköhöhdfg";
+        System.out.println(repeated(str, "dfg"));
     }
     public static int repeated(String str,String aa){
         int count = 0;
