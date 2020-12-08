@@ -7,11 +7,9 @@ public class NumberLineJumps {
 
     static String kangaroo(int x1, int v1, int x2, int v2) {
         boolean flag;
-        if(v1>v2){
-            flag= (x1 - x2) % (v1 - v2) == 0;
-        }else{
-           flag=false;
-        }
+
+        flag= v1 > v2 && (x1 - x2) % (v1 - v2) == 0;
+
         return flag ?"YES":"NO";
     }
 }
