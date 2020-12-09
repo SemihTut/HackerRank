@@ -10,19 +10,9 @@ public class TakingNumber {
         String text = "There are 1670 records that match the selected query";
         String reg = "\\d+";
         String result = text.replaceAll("[^0-9]","");
-        System.out.println("toString() = " + result);
-        System.out.println(reg(text, reg));
+        System.out.println("result = " + result);
+
 
     }
-    public static List<String> reg(String str, String reg){
-        List<String>ask = new ArrayList<>();
 
-        Matcher m = Pattern.compile(reg).matcher(str);
-        while (m.find()){
-            if(!m.group().isEmpty()){
-                ask.add(m.group());
-            }
-        }
-        return ask;
-    }
 }
