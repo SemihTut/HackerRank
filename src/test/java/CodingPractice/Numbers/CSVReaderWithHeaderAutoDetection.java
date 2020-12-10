@@ -52,7 +52,6 @@ public class CSVReaderWithHeaderAutoDetection {
             for (CSVRecord csvRecord : csvParser) {
                 // Accessing values by Header names
                 String name = csvRecord.get("Input Number");
-                String email = csvRecord.get("Prime Factors");
                 myList.add(name);
 
             }

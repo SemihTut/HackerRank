@@ -8,6 +8,8 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 
 public class CSVWriter {
@@ -34,10 +36,9 @@ public class CSVWriter {
         try (
                 BufferedWriter writer = Files.newBufferedWriter(Paths.get(SAMPLE_CSV_FILE));
 
-                CSVPrinter csvPrinter = new CSVPrinter(writer, CSVFormat.DEFAULT
-                        .withHeader("Input Number", "Prime Factors"));
+                CSVPrinter csvPrinter = new CSVPrinter(writer,CSVFormat.DEFAULT)
         ) {
-            writer.newLine();
+
             csvPrinter.printRecord(String.valueOf(inputNumber), String.valueOf(primeFactors));
 
             csvPrinter.flush();
@@ -51,8 +52,8 @@ public class CSVWriter {
         try (
                 BufferedWriter writer = Files.newBufferedWriter(Paths.get(SAMPLE_CSV_FILE));
 
-                CSVPrinter csvPrinter = new CSVPrinter(writer, CSVFormat.DEFAULT
-                        .withHeader("Input Number", "Prime Factors"));
+
+                CSVPrinter csvPrinter = new CSVPrinter(writer,CSVFormat.DEFAULT)
         ) {
 
             csvPrinter.printRecord(String.valueOf(inputNumber), String.valueOf(primeFactors));
@@ -62,5 +63,18 @@ public class CSVWriter {
             e.printStackTrace();
         }
 
+    }
+    public String convertToCSV(String[] data) {
+        return Stream.of(data)
+                .map(this::escapeSpecialCharacters)
+                .collect(Collectors.joining(","));
+    }
+    public String escapeSpecialCharacters(String data) {
+        String escapedData = data.replaceAll("\\R", " ");
+        if (data.contains(",") || data.contains("\"") || data.contains("'")) {
+            data = data.replace("\"", "\"\"");
+            escapedData = "\"" + data + "\"";
+        }
+        return escapedData;
     }
 }
