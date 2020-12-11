@@ -2,6 +2,7 @@ package Regex.TimBuchalka;
 
 public class regularExpression {
     public static void main(String[] args) {
+        String name = "Semih Alperen Samet";
         String first = "abcdFEG1234asdvdfhlföj";
         System.out.println(first.replaceAll("^abcd","XXXXXXXXXX"));
 
@@ -17,5 +18,9 @@ public class regularExpression {
 
         String third = "abcdF     EGabc  fth jdsadfökö        456k4äöy";
         System.out.println(third.replaceAll("\\s",""));
+
+        //herbir kelimenin onune ve arkasina X koyuiyor
+        System.out.println(name.replaceAll("\\b","X"));
+
     }
 }
