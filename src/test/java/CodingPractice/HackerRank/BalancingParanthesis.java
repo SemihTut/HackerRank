@@ -5,9 +5,9 @@ import java.util.Map;
 
 public class BalancingParanthesis {
     public static void main(String[] args) {
-        String str = "(()))";
-       // System.out.println("getMin(str) = " + getMin(str));
-        String skil="pcmbzpcmbzpcmbzz";
+        String str = "(())))))))))";
+        System.out.println("getMin(str) = " + getMin(str));
+        String skil="pcmbzpcmbzpcmbzzzzzz";
         System.out.println("perfectTeam(skil) = " + perfectTeam(skil));
     }
     public static int getMin(String s){
@@ -18,7 +18,6 @@ public class BalancingParanthesis {
             freq.merge(String.valueOf(c),1,Integer::sum);
 
         }
-        int result =0;
         return Math.abs(freq.get("(")-freq.get(")"));
     }
     public static int perfectTeam(String skills){
