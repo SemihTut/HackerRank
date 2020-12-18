@@ -15,4 +15,5 @@ public class RepeatationOfChars {
         }
         System.out.println("count = " + count);
     }
+
 }
