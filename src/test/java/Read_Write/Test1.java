@@ -17,9 +17,8 @@ public class Test1 {
             e.printStackTrace();
         }
         ConfigurationReader.set("name","semih");
-        ConfigurationReader.set("name2","asli");
+        ConfigurationReader.set("name1","asli");
 
-        System.out.println(ConfigurationReader.get("name"));
 
     }
 

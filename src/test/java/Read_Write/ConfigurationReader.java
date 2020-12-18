@@ -31,7 +31,7 @@ public class ConfigurationReader {
     public static void set(String key, String value){
         try (OutputStream outputStream = new FileOutputStream("configuration.properties")){
             properties.setProperty(key, value);
-            properties.store(outputStream,null);
+            properties.store(outputStream,"semihhhhhhhh");
         } catch (IOException e) {
             e.printStackTrace();
         }
