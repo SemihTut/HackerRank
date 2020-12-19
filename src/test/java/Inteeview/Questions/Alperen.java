@@ -2,7 +2,7 @@ package Inteeview.Questions;
 
 public class Alperen {
     public static void main(String[] args) {
-        System.out.println("findFirst(34518,27589) = " + findFirst(34518, 27589));
+        System.out.println("findFirst(34518,27589) = " + findFirst(30000, 27589));
     }
 
     public static int findFirst(int number1,int number2){
