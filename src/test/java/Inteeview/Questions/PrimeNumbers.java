@@ -16,7 +16,7 @@ public class PrimeNumbers {
         return true;
     }
     private static List<Integer>prList(int n){
-        List<Integer>primeList=new ArrayList();
+        List<Integer> primeList=new ArrayList<>();
         if(n>=2){
            primeList.add(2);
         }
