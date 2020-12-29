@@ -1,25 +1,30 @@
 package CodingPractice.CodeReview;
 
+import java.util.Arrays;
+import java.util.stream.Stream;
+
 public class Soru5 {
     public static void main(String[] args) {
-        int[]arr ={1,4,2,7,3,5,-2,3,1,2};
-        System.out.println(smallest(arr));
-        int number =15;
-        int start =0;
-        int last = arr.length-1;
+        int[]arr = {1,23,43,56,2,5,8};
+        int[]arrNew = new int[arr.length];
+        int first = 0;
+        int last = arr.length - 1;
 
-
-
-    }
-    private static int smallest(int[]arr){
-        int input =0;
-        int small = Integer.MAX_VALUE;
-        for(int i=0;i<arr.length-1;i++){
-            if(arr[i]<small){
-                small=arr[i];
-                input =i;
+        for(int i = 0;i<arr.length;i++){
+            if(twoDigits(arr[i])){
+                arrNew[last]=arr[i];
+                last--;
+            }else{
+                arrNew[first]=arr[i];
+                first++;
             }
         }
-        return input;
+        for(int a :arrNew){
+            System.out.print(a+" ");
+        }
+
+    }
+    public static boolean twoDigits(int n) {
+        return n/10!=0;
     }
 }
