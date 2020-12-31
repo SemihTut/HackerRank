@@ -19,11 +19,10 @@ public class GradingStudents {
             }else{
                 if(s%5>2){
                     s+=5-s%5;
-                    success.add(s);
                 }else{
                     s-=s%5;
-                    success.add(s);
                 }
+                success.add(s);
             }
         }
         return success;

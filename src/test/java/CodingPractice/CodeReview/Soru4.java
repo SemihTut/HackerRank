@@ -5,9 +5,11 @@ public class Soru4 {
     public static void main(String[] args) {
         List<Integer> my1 = Arrays.asList(1,2,6,7,8);
         List<Integer> my2 = Arrays.asList(2,3,3,5);
+        int[]a1 = {1,2,6,7,8};
+        int[]a2 = {2,3,3,5};
+        System.out.println(Arrays.toString(asd(a1,a2)));
 
-        System.out.println(joinLists(my1, my2));
-        System.out.println("joinLists2(my1,my2) = " + joinLists2(my1, my2));
+
     }
     private static List<Integer>joinLists(List<Integer>list1,List<Integer>list2){
         List<Integer>joins = new ArrayList<>();
@@ -46,4 +48,35 @@ public class Soru4 {
         }
         return joins;
     }
+    private static int[] asd (int[] arr,int[] arr2){
+        int[]arr3 = new int[arr.length+arr2.length-1];
+        int lentgh1 = arr.length;
+        int length2 = arr2.length;
+        int i =0;
+        int j=0;
+        int k=0;
+        while(i<lentgh1&&j<length2){
+            if(arr[i]<arr2[j]){
+                arr3[k]=arr[i];
+                i++;
+            }else if(arr[i]>arr2[j]) {
+                arr3[k]=arr[j];
+                j++;
+            }else{
+                arr3[k]=arr[i];
+                arr3[k]=arr[j];
+                i++;
+                j++;
+            }
+            k++;
+        }
+        while(i<lentgh1){
+            arr3[k++]=arr[i++];
+        }
+        while(j<length2){
+            arr3[k++]=arr[j++];
+        }
+        return arr3;
+    }
+
 }

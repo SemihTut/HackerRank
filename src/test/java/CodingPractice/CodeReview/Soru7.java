@@ -1,5 +1,6 @@
 package CodingPractice.CodeReview;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Soru7 {
@@ -9,19 +10,18 @@ public class Soru7 {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Lutfen 1-100 aras bir sayi giriniz");
         int count = 1;
-
         int guess = scanner.nextInt();
         while(number!=guess){
             if(number>guess){
                 System.out.println("Daha buyuk bir sayi giriniz");
                 guess = scanner.nextInt();
-                count++;
-            }else if(number<guess){
+
+            }else {
                 System.out.println("Daha kucuk bir sayi giriniz");
                 guess = scanner.nextInt();
-                count++;
-            }
 
+            }
+            count ++;
         }
         System.out.println("count = " + count);
     }
