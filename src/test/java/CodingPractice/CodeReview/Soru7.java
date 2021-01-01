@@ -14,16 +14,12 @@ public class Soru7 {
         while(number!=guess){
             if(number>guess){
                 System.out.println("Daha buyuk bir sayi giriniz");
-                guess = scanner.nextInt();
-
             }else {
                 System.out.println("Daha kucuk bir sayi giriniz");
-                guess = scanner.nextInt();
-
             }
+            guess = scanner.nextInt();
             count ++;
         }
         System.out.println("count = " + count);
     }
-
 }
