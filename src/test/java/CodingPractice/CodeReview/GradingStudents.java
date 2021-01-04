@@ -7,6 +7,7 @@ public class GradingStudents {
     private static List<Integer>gradings(int number){
         List<Integer>gradings =new ArrayList<>();
         List<Integer>success = new ArrayList<>();
+        List<Integer>success2 = new ArrayList<>(Arrays.asList(2,3,4,5));
         for(int i=0;i<number;i++){
             int grade = (int) (Math.random() * 100);
             gradings.add(grade);
@@ -26,5 +27,6 @@ public class GradingStudents {
             }
         }
         return success;
+        //411438451
     }
 }

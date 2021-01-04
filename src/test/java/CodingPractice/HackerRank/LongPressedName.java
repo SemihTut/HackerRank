@@ -15,5 +15,7 @@ public class LongPressedName {
                 firstString++;
             }
         }
+        return false;
+
     }
 }
