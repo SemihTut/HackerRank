@@ -2,7 +2,7 @@ package CodingPractice.CodeReview;
 
 public class SwitcCase {
     public static void main(String[] args) {
-        int first = 0, int second = 0;
+        int first = 0, second = 0;
         int third = 0;
         int i = 0;
         int sayi;
@@ -18,7 +18,9 @@ public class SwitcCase {
                 case 3:
                     third++;
                     break;
+
             }
+            i++;
         } while (i < 3);
     }
 }
