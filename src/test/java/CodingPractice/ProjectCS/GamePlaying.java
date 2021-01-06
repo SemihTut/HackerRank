@@ -17,24 +17,24 @@ public class GamePlaying {
         int eleman;
         do {
             i++;
-            eleman = i % 2 == 0 ? 2 : 1;
-            System.out.println(eleman == 1 ? "Player 1 oynuyor" : "Player 2 oynuyor");
+            System.out.println(i % 2 != 0 ? "Player 1 oynuyor" : "Player 2 oynuyor");
             Scanner scanner = new Scanner(System.in);
             System.out.println("Lutfen 0-3 arasinda bir dizi seciniz ?");
             dizi = scanner.nextInt();
             System.out.println("Lutfen 0-6 aras bir konum seciniz");
             int konum = scanner.nextInt();
+            System.out.println("Lutfen 1 veya 2 giriniz");
+            eleman = scanner.nextInt();
 
             switch (dizi) {
                 case 0:
                     if (isNull(list0, konum)) {
                         list0.set(konum, eleman);
-                        System.out.println(list0.get(konum));
                     } else {
                         System.out.println("Lutfen 0-6 arasi yeni bir konum seciniz");
                         list0.set(scanner.nextInt(), eleman);
-                        System.out.println(list0.get(konum));
                     }
+                    System.out.println(list0.get(konum));
                     break;
                 case 1:
                     if (isNull(list1, konum)) {
@@ -63,7 +63,7 @@ public class GamePlaying {
             }
             System.out.println(list0 + "\n" + list1 + "\n" + list2 + "\n" + list3);
         } while (!isWon(list0, list1, list2, list3, dizi));
-        System.out.println(eleman == 1 ? "Player 1 kazandi" : "Player 2 kazandi");
+        System.out.println(i % 2 != 0 ? "Player 1 kazandi" : "Player 2 kazandi");
     }
 
     public static boolean isNull(List<Integer> liste, int index) {
