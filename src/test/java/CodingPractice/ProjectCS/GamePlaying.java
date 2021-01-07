@@ -7,11 +7,11 @@ public class GamePlaying {
 
 
     public static void main(String[] args) {
-
         List<Integer> list0 = new ArrayList<>(Arrays.asList(0, 0, 0, 0, 0, 0, 0));
         List<Integer> list1 = new ArrayList<>(Arrays.asList(0, 0, 0, 0, 0, 0, 0));
         List<Integer> list2 = new ArrayList<>(Arrays.asList(0, 0, 0, 0, 0, 0, 0));
         List<Integer> list3 = new ArrayList<>(Arrays.asList(0, 0, 0, 0, 0, 0, 0));
+
         int i = 0;
         int dizi;
         int eleman;
@@ -21,12 +21,13 @@ public class GamePlaying {
             Scanner scanner = new Scanner(System.in);
             System.out.println("Lutfen 0-3 arasinda bir dizi seciniz ?");
             dizi = scanner.nextInt();
-            System.out.println("Lutfen 0-6 aras bir konum seciniz");
+            System.out.println("Lutfen 0-6 arasi bir konum seciniz");
             int konum = scanner.nextInt();
             System.out.println("Lutfen 1 veya 2 giriniz");
             eleman = scanner.nextInt();
 
             switch (dizi) {
+
                 case 0:
                     if (isNull(list0, konum)) {
                         list0.set(konum, eleman);
@@ -34,7 +35,6 @@ public class GamePlaying {
                         System.out.println("Lutfen 0-6 arasi yeni bir konum seciniz");
                         list0.set(scanner.nextInt(), eleman);
                     }
-                    System.out.println(list0.get(konum));
                     break;
                 case 1:
                     if (isNull(list1, konum)) {
@@ -61,7 +61,11 @@ public class GamePlaying {
                     }
                     break;
             }
-            System.out.println(list0 + "\n" + list1 + "\n" + list2 + "\n" + list3);
+
+            for(int k=0;k<7;k++){
+                System.out.println(list0.get(k)+" |"+list1.get(k)+" |"+list2.get(k)+" |"+list3.get(k));
+            }
+           // System.out.println(list0 + "\n" + list1 + "\n" + list2 + "\n" + list3);
         } while (!isWon(list0, list1, list2, list3, dizi));
         System.out.println(i % 2 != 0 ? "Player 1 kazandi" : "Player 2 kazandi");
     }
@@ -75,7 +79,7 @@ public class GamePlaying {
             switch (dizi) {
                 case 0:
                     List<Integer> subList = list0.subList(i, i + 3);
-                    System.out.println("subList = " + subList);
+                  //  System.out.println("subList = " + subList);
                     if (isSame(subList)) {
                         if (list0.get(i) == list1.get(i) && list0.get(i) != 0) {
                             return true;

@@ -12,7 +12,6 @@ public class TheHurdleRace {
 
     }
     static int hurdleRace(int k, int[] height) {
-
         int max = Arrays.stream(height).max().getAsInt();
         return max>k?(max-k):0;
 
