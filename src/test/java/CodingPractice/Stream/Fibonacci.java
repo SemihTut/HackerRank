@@ -31,6 +31,7 @@ public class Fibonacci {
     }
 
     public static Integer fib(Integer n){
+
         return n<=1?n:fib(n-1)+fib(n-2);
     }
 
@@ -38,6 +39,14 @@ public class Fibonacci {
         return Stream.iterate(new int[]{0,1},t->new int[]{t[1],t[1]+t[0]})
                 .limit(number+1).map(x->x[0])
                 .collect(Collectors.toList()).contains(number);
+    }
+
+    public static boolean ehliyetYasi(int yas){
+        return yas>18;
+    }
+
+    public static void ehliyetYasi2(int yas){
+        System.out.println(yas>18?"Alabilir":"Alamaz");
     }
 }
 
