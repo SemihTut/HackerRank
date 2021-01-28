@@ -33,6 +33,10 @@ public class TimBuchalkaStreams {
                 .limit(number+1)
                 .map(n->n[0]).collect(Collectors.toList()).contains(number);
     }
-
+    public static boolean isFibonacci2(int number){
+        return Stream.iterate(new int[]{0,1},t -> new int[]{t[1],t[0]+t[1]})
+                .limit(number+1)
+                .map(n->n[0]).collect(Collectors.toList()).contains(number);
+    }
 
 }
