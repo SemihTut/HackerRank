@@ -14,9 +14,15 @@ public class TimBuchalkaStreams {
       //  fibonacciList(7).forEach(System.out::println);
        // System.out.println("fibonacciList(13) = " +isFibonacci(14));
 
-        String myString = "Let's split this up into array";
+        String myString = "Let's 5 split this up into array";
         String[]parts = myString.split(" ");
-        Arrays.stream(parts).forEach(System.out::println);
+      //  Arrays.stream(parts).forEach(System.out::println);
+        String s1 = myString.replaceAll("\\D", "");
+        System.out.println("s1 = " + s1);
+        List<String>listArray= Arrays.asList(parts);
+        List<String> numbers = listArray.stream().map(s->s.replaceAll("\\D",""))
+                .collect(Collectors.toList());
+        numbers.forEach(System.out::println);
 
     }
 
