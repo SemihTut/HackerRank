@@ -21,9 +21,9 @@ public class Palindrome {
                 .noneMatch(i->temp.charAt(i) != temp.charAt(temp.length()-1-i));
 
 
-
-
     }
+
+
 
 
 }
