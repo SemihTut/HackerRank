@@ -15,6 +15,7 @@ public class freeTimeStudy {
         return IntStream.rangeClosed(0,updated.length()/2)
                 .noneMatch(i->updated.charAt(i)!=updated.charAt(updated.length()-1-i));
 
+        // str.replaceAll("\\s,"").toLowerCase();
 
     }
 }
