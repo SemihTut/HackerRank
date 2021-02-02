@@ -16,6 +16,7 @@ public class freeTimeStudy {
                 .noneMatch(i->updated.charAt(i)!=updated.charAt(updated.length()-1-i));
 
         // str.replaceAll("\\s,"").toLowerCase();
+        // str.replaceAll("\\s,"").toLowerCase();
 
     }
 }
