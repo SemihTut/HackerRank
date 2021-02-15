@@ -6,6 +6,13 @@ import java.util.Map;
 public class firstNonRepeatingCharacter {
     public static void main(String[] args) {
         System.out.println("nonRepeatingOne " + nonRepeatingOne("aaabcddeefbcf"));
+        String str ="123 results for PC";
+        String digit=str.replaceAll("\\D","");
+        System.out.println("digit = " + digit);
+        String asd = str.substring(0,str.indexOf(""));
+        System.out.println("asd = " + asd);
+
+
     }
     //aaabbcddeef
     public static char nonRepeatingOne(String str){
@@ -27,6 +34,9 @@ public class firstNonRepeatingCharacter {
             if(freq.get(a)==1) return a;
         }
 
+      //  System.out.println(ortalama >=60?"Gectiniz tebrikler":"Butunlemeye kaldiniz");
         return '_';
     }
+
+
 }
