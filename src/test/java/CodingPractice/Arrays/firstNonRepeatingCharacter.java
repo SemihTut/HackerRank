@@ -38,5 +38,12 @@ public class firstNonRepeatingCharacter {
         return '_';
     }
 
+    /*
+
+    for(int i=0;i<str.length();i++){
+            char a = str.charAt(i);
+            if(freq.get(a)==1) return a;
+        }
+     */
 
 }
