@@ -46,4 +46,12 @@ public class firstNonRepeatingCharacter {
         }
      */
 
+    /*for(int i=0;i<str.length();i++){
+            char a = str.charAt(i);
+            if(freq.containsKey(a)){
+                freq.put(a,freq.get(a)+1);
+            }else{
+                freq.put(a,1);
+            }
+        }*/
 }
