@@ -132,6 +132,8 @@ public class KahveMakinasi {
         }
 
         System.out.println(hangiKahve+" "+ boyut+ " hazırdır. Afiyet olsun !!! ");
+        System.out.println(hangiKahve+" "+ boyut+ " hazırdır. Afiyet olsun !!! ");
+        System.out.println(hangiKahve+" "+ boyut+ " hazırdır. Afiyet olsun !!! ");
     }
 
 }
