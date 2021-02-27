@@ -8,6 +8,10 @@ public class reverseArray {
 
         String str = "Her şey için ";
         String [] myArray = str.split(" ");
+        /*
+        String str = "Her şey için ";
+        String [] myArray = str.split(" ");
+         */
         String [] newArray = new String[myArray.length];
 
         for(int j=0, i =myArray.length-1;i>=0;i--,j++){
