@@ -5,10 +5,13 @@ public class SaatSorusu {
         int v1 = 90;
         int v2 = 45;
         int v3 = 75;
+
+        int smallest = Math.min(v1,Math.min(v2,v3));
+
         int ebob = 1;
         int ekok;
 
-        for (int i = 1; i <= v1 && i <= v2 && i <= v3; ++i) {
+        for (int i = 1; i <= smallest; ++i) {
             if (v1 % i == 0 && v2 % i == 0 && v3 % i == 0)
                 ebob = i;
 
