@@ -24,9 +24,10 @@ public class SaatSorusu {
 
         int sameHourAgain = 3 +akrep;
 
-        String yelkovanString = String.valueOf(yelkovan);
-
-        System.out.println("Saat = " + sameHourAgain + ":"+yelkovanString);
+        System.out.println("Saat = " + sameHourAgain + ":"+yelkovan);
+        System.out.println("Saat = " + sameHourAgain + ":"+yelkovan);
+        System.out.println("Saat = " + sameHourAgain + ":"+yelkovan);
+        System.out.println("Saat = " + sameHourAgain + ":"+yelkovan);
 
     }
 
