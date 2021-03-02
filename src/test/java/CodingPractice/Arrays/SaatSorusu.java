@@ -28,6 +28,10 @@ public class SaatSorusu {
         System.out.println("Saat = " + sameHourAgain + ":"+yelkovan);
         System.out.println("Saat = " + sameHourAgain + ":"+yelkovan);
         System.out.println("Saat = " + sameHourAgain + ":"+yelkovan);
+        System.out.println("Saat = " + sameHourAgain + ":"+yelkovan);
+        System.out.println("Saat = " + sameHourAgain + ":"+yelkovan);
+        System.out.println("Saat = " + sameHourAgain + ":"+yelkovan);
+        System.out.println("Saat = " + sameHourAgain + ":"+yelkovan);
 
     }
 
