@@ -26,7 +26,14 @@ public class MakeNumbersZero {
         }
         return Stream.concat(left.stream(),right.stream()).collect(Collectors.toList());
     };
+
     public static int indexOfZero(List<Integer>numbers){
+        List<Integer> collect = IntStream.range(0, numbers.size())
+                .filter(x -> numbers.get(x) == 0).boxed().collect(Collectors.toList());
+        return collect.get(0);
+    }
+
+    public static int indexOfZero2(List<Integer>numbers){
         List<Integer> collect = IntStream.range(0, numbers.size())
                 .filter(x -> numbers.get(x) == 0).boxed().collect(Collectors.toList());
         return collect.get(0);
