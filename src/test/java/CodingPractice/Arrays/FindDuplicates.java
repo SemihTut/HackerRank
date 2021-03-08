@@ -35,17 +35,15 @@ public class FindDuplicates {
     }
 
     public static String newOne(String str) {
-        List<String> myList = Arrays.asList(str.split(""));
-        String result = "";
+        String[] myList = str.split("");
+        StringBuilder result = new StringBuilder();
         for (String s : myList) {
             int quant = quantity(str, s);
-            if (result.contains(s)) {
-                result = result;
-            } else {
-                result += quant + s;
+            if (!result.toString().contains(s)) {
+                result.append(quant).append(s);
             }
         }
-        return result;
+        return result.toString();
 
     }
 
