@@ -1,13 +1,16 @@
 package CodingPractice.Arrays;
 
+import org.junit.Test;
+
 import java.util.*;
 import java.util.stream.Collectors;
 
 public class FindDuplicates {
     public static void main(String[] args) {
 
-        String sss = "aabbcsdfjkhsakjdghlöadkfjsgöoaierugöoaksndfgölasnmgfoöaiwjgfölasmdfölaskjöofgkndga";
-        System.out.println("newOne(sss) = " + newOne(sss));
+        String sss = "aabbcsdf";
+        freq(sss);
+       // System.out.println("newOne(sss) = " + newOne(sss));
         List<Integer> arr = new ArrayList<>(Arrays.asList(2, 3, 45, 3, 67, 34, 2, 3, 45, 67, 9876));
         Map<Integer, Integer> quantity = new HashMap<>();
         //first way merge and for each
@@ -55,5 +58,19 @@ public class FindDuplicates {
                 count++;
         }
         return count;
+    }
+
+
+    public static void freq(String str){
+        List<String> arr = new ArrayList<>(Arrays.asList(str.split("")));
+        Map<String, Integer> quantity = new HashMap<>();
+        for(String s : arr){
+            quantity.merge(s,1,Integer::sum);
+        }
+        String asd="";
+        for(String s : arr){
+            asd = asd+String.valueOf(quantity.get(s)).concat(s);
+        }
+        System.out.println("asd = " + asd);
     }
 }
