@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 public class FindDuplicates {
     public static void main(String[] args) {
 
-        String sss = "aabbcsdf";
+        String sss = "aabbasdrtutnmsfasvddfhmbasdcacstnfscsdf";
         freq(sss);
        // System.out.println("newOne(sss) = " + newOne(sss));
         List<Integer> arr = new ArrayList<>(Arrays.asList(2, 3, 45, 3, 67, 34, 2, 3, 45, 67, 9876));
@@ -67,10 +67,10 @@ public class FindDuplicates {
         for(String s : arr){
             quantity.merge(s,1,Integer::sum);
         }
-        String asd="";
-        for(String s : arr){
-            asd = asd+String.valueOf(quantity.get(s)).concat(s);
+        StringBuilder asd= new StringBuilder();
+        for(String s : quantity.keySet()){
+            asd.append(String.valueOf(quantity.get(s))).append(s);
         }
-        System.out.println("asd = " + asd);
+        System.out.println("asd = " + asd.toString());
     }
 }
