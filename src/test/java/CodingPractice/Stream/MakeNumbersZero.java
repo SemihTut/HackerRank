@@ -10,6 +10,8 @@ public class MakeNumbersZero {
         List<Integer>numbers = Arrays.asList(1,2,3,4,0,4,5);
         System.out.println("makeZero(numbers) = " + makeZero(numbers));
 
+
+
     }
 
     public static List<Integer> makeZero (List<Integer>list){
@@ -37,5 +39,8 @@ public class MakeNumbersZero {
         List<Integer> collect = IntStream.range(0, numbers.size())
                 .filter(x -> numbers.get(x) == 0).boxed().collect(Collectors.toList());
         return collect.get(0);
+
     }
+
+
 }
