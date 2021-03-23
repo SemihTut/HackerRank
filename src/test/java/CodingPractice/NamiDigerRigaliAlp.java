@@ -106,12 +106,10 @@ public class NamiDigerRigaliAlp {
 
     public static List<Integer>twoD_Array(Integer[][]arr){
         List<Integer>myList = new ArrayList<>();
-
         //1st way with stream
 /*
         return Arrays.stream(arr)
                 .flatMap(Arrays::stream).collect(Collectors.toList());*/
-
 
         for(Integer[] a : arr){
             myList.addAll(Arrays.asList(a));
