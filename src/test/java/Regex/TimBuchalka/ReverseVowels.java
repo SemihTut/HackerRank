@@ -17,9 +17,21 @@ public class ReverseVowels {
             }else if(arr[i].equals("A") || arr[i].equals("E") || arr[i].equals("I") || arr[i].equals("O") || arr[i].equals("U")){
                 arr[i] = arr[i].toLowerCase();
             }
-            newStr =newStr = newStr+arr[i];
+            newStr =newStr.concat(arr[i]);
         }
         return newStr;
-
     }
+    /*
+    String[] arr = str.split("");
+        String newStr = "";
+        for(int i=0;i<arr.length;i++){
+            if(arr[i].equals("a") || arr[i].equals("e") || arr[i].equals("i") || arr[i].equals("o") || arr[i].equals("u")){
+                arr[i] = arr[i].toUpperCase();
+            }else if(arr[i].equals("A") || arr[i].equals("E") || arr[i].equals("I") || arr[i].equals("O") || arr[i].equals("U")){
+                arr[i] = arr[i].toLowerCase();
+            }
+            newStr =newStr.concat(arr[i]);
+        }
+        return newStr;
+     */
 }
