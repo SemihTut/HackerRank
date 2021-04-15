@@ -17,3 +17,5 @@ h
 8src/test/java/CodingPractice/Stream/StreamBeginners.java,d\4\d4e5e95e28f877bc02c0544a7c44fb1ca50df83e
 b
 2src/test/java/Regex/TimBuchalka/ReverseVowels.java,1\5\1507e2f41534b9433f2ed3b89ad347aaf595a0c1
+`
+0src/test/java/Inteeview/Questions/Telegram3.java,1\6\16db164bf4df1d4e3bdf86cdf734c806efbf8f40
