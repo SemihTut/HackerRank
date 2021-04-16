@@ -19,3 +19,7 @@ b
 2src/test/java/Regex/TimBuchalka/ReverseVowels.java,1\5\1507e2f41534b9433f2ed3b89ad347aaf595a0c1
 `
 0src/test/java/Inteeview/Questions/Telegram3.java,1\6\16db164bf4df1d4e3bdf86cdf734c806efbf8f40
+j
+:src/test/java/CodingPractice/Stream/AlgorithmQuestion.java,3\3\3390ccc0cf52377f36f81c4f5adc4440e5697bf5
+b
+2src/test/java/CodingPractice/Stream/Fibonacci.java,c\3\c3e5c3ed0dd8b3d90aa504de92afbed414327a5d

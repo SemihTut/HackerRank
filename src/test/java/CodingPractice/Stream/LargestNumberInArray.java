@@ -1,6 +1,7 @@
 package CodingPractice.Stream;
 
 import java.util.Arrays;
+import java.util.List;
 
 public class LargestNumberInArray {
     public static void main(String[] args) {
@@ -11,5 +12,8 @@ public class LargestNumberInArray {
 
         return Arrays.stream(arr).max().getAsInt();
     }
+    public static int largestNum(List<Integer> lists){
 
+        return lists.stream().mapToInt(x->x).max().getAsInt();
+    }
 }
