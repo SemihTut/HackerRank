@@ -45,5 +45,6 @@ public class findDays {
         Period period = Period.between(givenData, LocalDate.now());
         return "Your asylum period is "+period.getYears()+" years "+period.getMonths()+" months "+period.getDays()+" days. ";
 
+        //try hard, DRY - Dont repeat yourself
     }
 }
