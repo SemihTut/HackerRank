@@ -27,3 +27,5 @@ m
 =src/test/java/CodingPractice/Stream/LargestNumberInArray.java,0\9\092f08172cf97ebc140fc16e3ef992d1fdcce0fc
 i
 9src/test/java/CodingPractice/FindingYourAge/findDays.java,b\4\b4a7a3f390972b360b9ad21b6cf3e1c64a1aadea
+[
++src/test/java/CodingPractice/TietoEvry.java,e\8\e8d685382edbb7af3733d8155685746b8a0c6478
