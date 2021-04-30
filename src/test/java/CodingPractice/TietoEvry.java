@@ -27,4 +27,13 @@ public class TietoEvry {
         return freq.get(wanted);
 
     }
+
+    public static int count3(String str, String wanted){
+        Map<String,Integer> freq = new HashMap<>();
+        for(String a : str.split("")){
+            freq.merge(a,1,Integer::sum);
+        }
+        return freq.get(wanted);
+
+    }
 }

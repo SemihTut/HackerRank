@@ -13,7 +13,7 @@ public class Fibonacci {
       /*  System.out.println(getFibonacci(10));
         System.out.println(getFibonacci2(5));
         System.out.println("fib(3) = " + fib(7));
-        System.out.println(isFibonacci(14));*/
+        System.out.println(isFibonacci(14));
         System.out.println("isFibo(5) = " + isFibo(3));
         System.out.println("getFibonacci(3) = " + getFibonacci(3));
         System.out.println("fib(6) = " + fib(6));
@@ -22,7 +22,9 @@ public class Fibonacci {
         System.out.println("fib(2) = " + fib(2));
         System.out.println("fib(3) = " + fib(3));
         System.out.println("fib(4) = " + fib(4));
-        System.out.println("fib(5) = " + fib(5));
+        System.out.println("fib(5) = " + fib(5));*/
+        System.out.println("isFibo(5) = " + isFibo(5));
+        System.out.println("myNumber(15) = " + myNumber(5));
 
     }
     public static List<Integer>getFibonacci(int series){
@@ -73,6 +75,22 @@ public class Fibonacci {
 
     public static void ehliyetYasi2(int yas){
         System.out.println(yas>18?"Alabilir":"Alamaz");
+    }
+
+    public static int myNumber(int number){
+        List<Integer> collect = Stream.iterate(new int[]{0, 1}, t -> new int[]{t[1], t[0] + t[1]})
+                .limit(number)
+                .map(x -> x[0])
+                .collect(Collectors.toList());
+        return collect.get(collect.size()-1);
+
+    }
+
+    public static boolean isFibon(int number){
+        return Stream.iterate(new int[]{0,1},t->new int[]{t[1],t[0]+t[1]})
+                .limit(number+1)
+                .map(x->x[0])
+                .collect(Collectors.toList()).contains(number);
     }
 }
 
