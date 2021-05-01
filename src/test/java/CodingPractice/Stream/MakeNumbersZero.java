@@ -9,7 +9,7 @@ public class MakeNumbersZero {
     public static void main(String[] args) {
         List<Integer>numbers = Arrays.asList(1,2,3,4,0,4,5);
         System.out.println("makeZero(numbers) = " + makeZero(numbers));
-
+        System.out.println("index0(numbers) = " + index0(numbers));
 
 
     }
@@ -30,9 +30,9 @@ public class MakeNumbersZero {
     };
 
     public static int indexOfZero(List<Integer>numbers){
-        List<Integer> collect = IntStream.range(0, numbers.size())
-                .filter(x -> numbers.get(x) == 0).boxed().collect(Collectors.toList());
-        return collect.get(0);
+        return IntStream.range(0, numbers.size())
+                .filter(x -> numbers.get(x) == 0).boxed().collect(Collectors.toList()).get(0);
+
     }
 
     public static int indexOfZero2(List<Integer>numbers){
@@ -42,5 +42,10 @@ public class MakeNumbersZero {
 
     }
 
+    public static int index0(List<Integer>liste){
+        return IntStream.range(0,liste.size())
+                .filter(x->liste.get(x)==0)
+                .boxed().mapToInt(x->x).sum();
+    }
 
 }
