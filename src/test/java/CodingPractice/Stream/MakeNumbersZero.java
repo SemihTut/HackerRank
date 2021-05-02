@@ -25,10 +25,16 @@ public class MakeNumbersZero {
         }
         for(int i=indexZero;i<list.size();i++){
                 right.add(list.get(indexZero));
+                // some notes about stream
         }
         return Stream.concat(left.stream(),right.stream()).collect(Collectors.toList());
     };
 
+    /**
+     *
+     * @param numbers
+     * @return
+     */
     public static int indexOfZero(List<Integer>numbers){
         return IntStream.range(0, numbers.size())
                 .filter(x -> numbers.get(x) == 0).boxed().collect(Collectors.toList()).get(0);
