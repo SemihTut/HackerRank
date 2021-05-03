@@ -14,6 +14,11 @@ public class MakeNumbersZero {
 
     }
 
+    /**
+     *
+     * @param list
+     * @return
+     */
     public static List<Integer> makeZero (List<Integer>list){
         int element =0;
         List<Integer>left=new ArrayList<>();
@@ -41,6 +46,11 @@ public class MakeNumbersZero {
 
     }
 
+    /**
+     *
+     * @param numbers
+     * @return
+     */
     public static int indexOfZero2(List<Integer>numbers){
         List<Integer> collect = IntStream.range(0, numbers.size())
                 .filter(x -> numbers.get(x) == 0).boxed().collect(Collectors.toList());
@@ -48,6 +58,11 @@ public class MakeNumbersZero {
 
     }
 
+    /**
+     *
+     * @param liste
+     * @return
+     */
     public static int index0(List<Integer>liste){
         return IntStream.range(0,liste.size())
                 .filter(x->liste.get(x)==0)
