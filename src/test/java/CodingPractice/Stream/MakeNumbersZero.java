@@ -69,6 +69,11 @@ public class MakeNumbersZero {
                 .boxed().mapToInt(x->x).sum();
     }
 
+    /**
+     *
+     * @param liste
+     * @return
+     */
     public static int index1(List<Integer>liste){
         return IntStream.range(0,liste.size())
                 .filter(x->liste.get(x)==0)
