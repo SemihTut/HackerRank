@@ -7,10 +7,14 @@ import java.util.stream.Stream;
 
 public class MakeNumbersZero {
     public static void main(String[] args) {
-        List<Integer>numbers = Arrays.asList(1,2,3,4,0,4,5);
-        System.out.println("makeZero(numbers) = " + makeZero(numbers));
-        System.out.println("index0(numbers) = " + index0(numbers));
+        List<Integer>numbers = Arrays.asList(1,2,3,4,0,4,5,2);
+      //  System.out.println("makeZero(numbers) = " + makeZero(numbers));
+      //  System.out.println("index0(numbers) = " + index0(numbers));
+        long count = IntStream.range(0, numbers.size())
+                .filter(x -> numbers.get(x) == 2)
+                .count();
 
+        System.out.println("first = " + count);
 
     }
 
@@ -79,4 +83,6 @@ public class MakeNumbersZero {
                 .filter(x->liste.get(x)==0)
                 .boxed().mapToInt(x->x).sum();
     }
+
+
 }
