@@ -29,3 +29,7 @@ i
 9src/test/java/CodingPractice/FindingYourAge/findDays.java,b\4\b4a7a3f390972b360b9ad21b6cf3e1c64a1aadea
 [
 +src/test/java/CodingPractice/TietoEvry.java,e\8\e8d685382edbb7af3733d8155685746b8a0c6478
+a
+1src/test/java/CodingPractice/Codility/Solera.java,d\2\d23fb76a52610033e868f6dcb45cc177a6d62dd8
+f
+6src/test/java/CodingPractice/Distinct/Distinction.java,5\0\50f43a4c36ddf928af55e92059ea7128f8ce6716

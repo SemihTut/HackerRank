@@ -9,6 +9,10 @@ import java.util.stream.Collectors;
 
 public class Amazon {
 
+    /**
+     *
+     * @param args to find the links which ends with amazon and not start with amazon
+     */
     public static void main(String[] args) {
         List<String>linksList = new ArrayList<>();
         linksList.add("Amazon semih");
