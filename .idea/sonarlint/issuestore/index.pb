@@ -33,3 +33,9 @@ a
 1src/test/java/CodingPractice/Codility/Solera.java,d\2\d23fb76a52610033e868f6dcb45cc177a6d62dd8
 f
 6src/test/java/CodingPractice/Distinct/Distinction.java,5\0\50f43a4c36ddf928af55e92059ea7128f8ce6716
+c
+3src/test/java/CodingPractice/Numbers/Fibonacci.java,6\c\6cbb810bed4807c553c215450287224d1c11ddab
+i
+9src/test/java/CodingPractice/Stream/QATestAssignment.java,9\b\9b91110fa1e9d59243837926b84d503f07f768be
+O
+src/test/java/Regex/Amazon.java,d\7\d77886e6687b6c32e4513afb36ece6c892c7333e

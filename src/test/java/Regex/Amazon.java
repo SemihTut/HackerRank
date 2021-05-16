@@ -21,6 +21,7 @@ public class Amazon {
         linksList.add("Amazon Business Card amazon");
 
 
+        //to find the links which ends with amazon and not start with amazon
         List<String> collect = linksList.stream()
                 .filter(x -> !Pattern.compile("^([Aa])mazon").matcher(x).find()
                 && Pattern.compile("([Aa])mazon").matcher(x).find())
@@ -28,10 +29,18 @@ public class Amazon {
         System.out.println("result " + collect);
 
 
+        // links end with [Aa]mazon
         List<String> collect1 = linksList.stream()
                 .filter(x -> Pattern.compile("\\b([Aa])mazon$").matcher(x).find())
                 .collect(Collectors.toList());
         System.out.println("Link ends with amazon " + collect1);
+
+        // links end with amazon
+
+        List<String> collect2 = linksList.stream()
+                .filter(x -> Pattern.compile("\\b([Aa])mazon$").matcher(x).find())
+                .collect(Collectors.toList());
+        System.out.println("collect2 = " + collect2);
 
     }
 
