@@ -92,6 +92,14 @@ public class Fibonacci {
                 .map(x->x[0])
                 .collect(Collectors.toList()).contains(number);
     }
+
+    public static List<Integer>myList(int number){
+
+        return Stream.iterate(new int[]{0,1},t -> new int[]{t[1],t[0]+t[1]})
+                .limit(number)
+                .map(x->x[0])
+                .collect(Collectors.toList());
+    }
 }
 
 
