@@ -23,8 +23,10 @@ public class Fibonacci {
         System.out.println("fib(3) = " + fib(3));
         System.out.println("fib(4) = " + fib(4));
         System.out.println("fib(5) = " + fib(5));*/
-        System.out.println("isFibo(5) = " + isFibo(5));
-        System.out.println("myNumber(15) = " + myNumber(5));
+       // System.out.println("isFibo(5) = " + isFibo(5));
+       // System.out.println("myNumber(15) = " + myNumber(5));
+        myList(5);
+
 
     }
     public static List<Integer>getFibonacci(int series){
@@ -93,12 +95,13 @@ public class Fibonacci {
                 .collect(Collectors.toList()).contains(number);
     }
 
-    public static List<Integer>myList(int number){
+    public static void myList(int number){
 
-        return Stream.iterate(new int[]{0,1},t -> new int[]{t[1],t[0]+t[1]})
+        List<Integer> collect = Stream.iterate(new int[]{0, 1}, t -> new int[]{t[1], t[0] + t[1]})
                 .limit(number)
-                .map(x->x[0])
+                .map(x -> x[0])
                 .collect(Collectors.toList());
+        System.out.println("collect = " + collect);
     }
 }
 
