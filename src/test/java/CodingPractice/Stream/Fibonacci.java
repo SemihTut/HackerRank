@@ -65,6 +65,11 @@ public class Fibonacci {
         return n<2?n:fib(n-1)+fib(n-2);
     }
 
+    /**
+     *
+     * @param number stream iterate new int []{0,1},t -> new int[]{t[1],t[0]+t[1]}
+     * @return
+     */
     private static boolean isFibonacci(int number){
         return Stream.iterate(new int[]{0,1},t->new int[]{t[1],t[1]+t[0]})
                 .limit(number+1).map(x->x[0])

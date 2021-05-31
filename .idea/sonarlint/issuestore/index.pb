@@ -39,3 +39,5 @@ i
 9src/test/java/CodingPractice/Stream/QATestAssignment.java,9\b\9b91110fa1e9d59243837926b84d503f07f768be
 O
 src/test/java/Regex/Amazon.java,d\7\d77886e6687b6c32e4513afb36ece6c892c7333e
+[
++src/test/java/Regex/SubstringIsPresent.java,9\d\9d3a24afda9d3e2aff5e5bb673f32b3c37fcdad8
