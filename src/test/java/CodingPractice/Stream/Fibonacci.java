@@ -29,6 +29,12 @@ public class Fibonacci {
 
 
     }
+
+    /**
+     *
+     * @param series
+     * @return
+     */
     public static List<Integer>getFibonacci(int series){
 
         return Stream.iterate(new int[]{0,1}, t -> new int[]{t[1], t[0] + t[1]})
