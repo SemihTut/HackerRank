@@ -69,7 +69,11 @@ public class Fibonacci {
 
     }
 
-
+    /**
+     *
+     * @param number
+     * @return
+     */
     public static boolean isFibo(int number){
         return Stream.iterate(new int []{0,1},t ->new int[]{t[0],t[0]+t[1]})
                 .limit(number+1)
