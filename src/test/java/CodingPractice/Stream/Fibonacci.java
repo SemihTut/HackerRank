@@ -122,6 +122,10 @@ public class Fibonacci {
                 .collect(Collectors.toList()).contains(number);
     }
 
+    /**
+     *
+     * @param number
+     */
     public static void myList(int number){
 
         List<Integer> collect = Stream.iterate(new int[]{0, 1}, t -> new int[]{t[1], t[0] + t[1]})
