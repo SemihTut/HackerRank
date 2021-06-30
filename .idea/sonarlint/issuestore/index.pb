@@ -41,3 +41,15 @@ O
 src/test/java/Regex/Amazon.java,d\7\d77886e6687b6c32e4513afb36ece6c892c7333e
 [
 +src/test/java/Regex/SubstringIsPresent.java,9\d\9d3a24afda9d3e2aff5e5bb673f32b3c37fcdad8
+d
+4src/test/java/CodingPractice/Arrays/randomWhile.java,b\6\b6e6d82430395ffd3943f0618ff29256090c4944
+l
+<src/test/java/CodingPractice/Arrays/multiplicationTable.java,0\4\0454173749d9969596b52e9d4bc75a8926d71516
+P
+ src/test/java/TechChallange.java,b\0\b05846e641fed8f55ba3ecedbf06a606b5d5fd0b
+^
+.src/test/java/Inteeview/Questions/Alperen.java,4\1\41a3e58350b94dbf8b67d0b68318ffcccb3df23e
+Y
+)src/test/java/Lambda/LambdaPractices.java,c\7\c789d849e134db8db43e03d87777e58cdc16e271
+7
+pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
