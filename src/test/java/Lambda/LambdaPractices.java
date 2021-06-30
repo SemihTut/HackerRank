@@ -3,6 +3,9 @@ package Lambda;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class LambdaPractices {
 
@@ -51,6 +54,15 @@ public class LambdaPractices {
 
         //**************************************************************
 
+        String a = "semih";
+        String asInt = a.chars().findFirst()
+                .toString();
+        System.out.println("asInt = " + asInt);
+
+        List<String> collect = Arrays.stream(a.split(""))
+                .collect(Collectors.toList());
+
+        System.out.println("collect = " + collect);
 
 
     }
